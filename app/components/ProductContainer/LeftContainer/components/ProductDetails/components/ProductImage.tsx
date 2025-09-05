@@ -1,10 +1,10 @@
-"use client"
+'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
 
 const ProductImage = () => {
   const [selectedImage, setSelectedImage] = useState(0)
-  
+
   const images = [
     'https://http2.mlstatic.com/D_NQ_NP_2X_800035-MLA81367078349_122024-F.webp',
     'https://http2.mlstatic.com/D_Q_NP_2X_621964-MLA81364948571_122024-R.webp',
@@ -21,14 +21,14 @@ const ProductImage = () => {
       {/* Thumbnails */}
       <div className="flex flex-col gap-2">
         {images.map((src, index) => (
-                      <button
-              key={index}
-              onClick={() => setSelectedImage(index)}
-              onMouseEnter={() => setSelectedImage(index)}
-              className={`relative h-[48px] w-[48px] hover:cursor-pointer overflow-hidden rounded border ${
-                selectedImage === index ? 'border-blue-500' : 'border-gray-200'
-              } hover:border-blue-500 focus:border-blue-500`}
-            >
+          <button
+            key={index}
+            onClick={() => setSelectedImage(index)}
+            onMouseEnter={() => setSelectedImage(index)}
+            className={`relative h-[48px] w-[48px] overflow-hidden rounded border hover:cursor-pointer ${
+              selectedImage === index ? 'border-blue-500' : 'border-gray-200'
+            } hover:border-blue-500 focus:border-blue-500`}
+          >
             <Image
               src={src}
               alt={`Product thumbnail ${index + 1}`}
@@ -56,4 +56,3 @@ const ProductImage = () => {
 }
 
 export default ProductImage
-
