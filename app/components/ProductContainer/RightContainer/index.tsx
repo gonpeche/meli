@@ -5,18 +5,16 @@ import PaymentOptions from './components/PaymentOptions'
 import RelatedProductsList from './components/RelatedProductsList'
 import SellerDetails from './components/SellerDetails'
 
-
-
 const LeftContainer = () => {
-return (
+  return (
     <div>
-        <BuySection />
-        <SellerDetails />
-        <OtherSellersBuyOptions />
-        <PaymentOptions />
-        <RelatedProductsList />
+      <BuySection />
+      <SellerDetails />
+      <OtherSellersBuyOptions />
+      <PaymentOptions />
+      <RelatedProductsList />
     </div>
-)
+  )
 }
 
 export default LeftContainer
