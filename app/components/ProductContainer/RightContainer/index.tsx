@@ -7,7 +7,7 @@ import SellerDetails from './components/SellerDetails'
 
 const LeftContainer = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       <BuySection />
       <SellerDetails />
       <OtherSellersBuyOptions />

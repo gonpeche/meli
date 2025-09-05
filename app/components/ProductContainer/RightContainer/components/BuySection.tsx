@@ -1,5 +1,6 @@
 import React from 'react'
 import { BadgeCheck, ChevronDown, RotateCcw, ShieldCheck } from 'lucide-react'
+import Card from '@/app/components/shared/Card'
 
 const mockData = {
   delivery: {
@@ -21,7 +22,7 @@ const mockData = {
 
 const BuySection = () => {
   return (
-    <div className="rounded-lg bg-white p-6">
+    <Card>
       {/* Delivery Info */}
       <div className="mb-6">
         <div className="mb-2">
@@ -89,7 +90,7 @@ const BuySection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Card>
   )
 }
 
