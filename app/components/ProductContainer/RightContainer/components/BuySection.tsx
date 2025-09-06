@@ -1,6 +1,5 @@
 import React from 'react'
-import { BadgeCheck, ChevronDown, RotateCcw, ShieldCheck } from 'lucide-react'
-import Card from '@/app/components/shared/Card'
+import { BadgeCheck, ChevronDown, ChevronRight, RotateCcw, ShieldCheck } from 'lucide-react'
 
 const mockData = {
   delivery: {
@@ -22,7 +21,7 @@ const mockData = {
 
 const BuySection = () => {
   return (
-    <Card>
+    <div className="rounded-lg bg-white p-6">
       {/* Delivery Info */}
       <div className="mb-6">
         <div className="mb-2">
@@ -50,12 +49,8 @@ const BuySection = () => {
 
       {/* Action Buttons */}
       <div className="mb-6 flex flex-col gap-3">
-        <button className="w-full rounded-lg bg-[#3483fa] py-3.5 text-white hover:cursor-pointer hover:bg-blue-600">
-          Comprar ahora
-        </button>
-        <button className="w-full rounded-lg bg-[#e3edfb] py-3.5 text-[#3483fa] hover:cursor-pointer hover:bg-blue-100">
-          Agregar al carrito
-        </button>
+        <button className="btn-primary">Comprar ahora</button>
+        <button className="btn-secondary">Agregar al carrito</button>
       </div>
 
       {/* Seller Info */}
@@ -73,14 +68,14 @@ const BuySection = () => {
       {/* Protection Info */}
       <div className="flex flex-col gap-4 text-sm">
         <div className="flex items-start gap-2">
-          <RotateCcw className="h-5 w-5 text-[#3483fa]" />
+          <RotateCcw className="mt-1 h-5 w-5 text-[#3483fa]" />
           <div>
             <span className="text-[#3483fa]">Devolución gratis.</span>
             <span className="text-gray-500"> Tenés 30 días desde que lo recibís.</span>
           </div>
         </div>
         <div className="flex items-start gap-2">
-          <ShieldCheck className="h-8 w-8 text-[#3483fa]" />
+          <ShieldCheck className="mt-1 h-8 w-8 text-[#3483fa]" />
           <div>
             <span className="text-[#3483fa]">Compra Protegida,</span>
             <span className="text-gray-500">
@@ -90,7 +85,7 @@ const BuySection = () => {
           </div>
         </div>
       </div>
-    </Card>
+    </div>
   )
 }
 

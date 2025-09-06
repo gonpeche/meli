@@ -1,10 +1,10 @@
-import React from "react";
-import ProductImage from "./components/ProductImage";
-import ProductSummary from "./components/ProductSummary";
+import React from 'react'
+import ProductImage from './components/ProductImage'
+import ProductSummary from './components/ProductSummary'
 
 const ProductDetails = () => {
   return (
-    <div className="flex justify-between border border-red-500">
+    <div className="flex justify-between">
       <div>
         <ProductImage />
       </div>
@@ -12,7 +12,7 @@ const ProductDetails = () => {
         <ProductSummary />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductDetails;
+export default ProductDetails

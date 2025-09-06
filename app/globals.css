@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ededed;
@@ -12,7 +12,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -22,5 +22,20 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Proxima Nova",-apple-system,Roboto,Arial,sans-serif;
+  font-family:
+    'Proxima Nova',
+    -apple-system,
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply w-full rounded-lg bg-[#3483fa] py-3.5 text-white hover:cursor-pointer hover:bg-blue-600;
+  }
+
+  .btn-secondary {
+    @apply w-full rounded-lg bg-[#e3edfb] py-3.5 text-[#3483fa] hover:cursor-pointer hover:bg-blue-100;
+  }
 }

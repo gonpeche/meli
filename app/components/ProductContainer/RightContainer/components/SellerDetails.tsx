@@ -87,9 +87,7 @@ const SellerDetails = () => {
           </div>
 
           {/* Call to action button */}
-          <button className="w-full rounded-lg bg-[#e3edfb] py-3.5 text-[#3483fa] hover:cursor-pointer hover:bg-blue-100">
-            Ir a la tienda oficial
-          </button>
+          <button className="btn-secondary">Ir a la tienda oficial</button>
         </div>
       </div>
     </Card>
