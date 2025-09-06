@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import productData from '@/data/product.json'
+import mockedItem from '@/data/item.json'
 
 export async function GET() {
   // Simulate edge processing time (100-300ms is realistic for CDN)
@@ -7,7 +7,7 @@ export async function GET() {
 
   return NextResponse.json(
     {
-      data: productData,
+      data: mockedItem,
       cache: {
         hit: true,
         location: 'edge',

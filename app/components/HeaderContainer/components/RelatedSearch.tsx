@@ -1,27 +1,23 @@
+'use client'
+
 import React from 'react'
+import { useProduct } from '@/app/context/ProductContext'
 
 const RelatedSearch = () => {
-  const items = [
-    'telefonos samsung',
-    'samsung galaxy',
-    'samsung a55',
-    'celulares 5g',
-    'samsung con nfc',
-    's20',
-    'samsung tienda oficial',
-  ]
+  const { item } = useProduct()
+  const suggestions = item?.header?.suggestions || []
 
   return (
     <div className="w-full">
       <div className="py-3">
         <p className="text-sm text-gray-900">
           <span className="font-semibold">También puede interesarte:</span>{' '}
-          {items.map((label, index) => (
+          {suggestions.map((label, index) => (
             <span key={label} className="text-gray-700">
               <a href="#" className="hover:underline">
                 {label}
               </a>
-              {index < items.length - 1 && <span className="mx-2">-</span>}
+              {index < suggestions.length - 1 && <span className="mx-2">-</span>}
             </span>
           ))}
         </p>
