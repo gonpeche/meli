@@ -2,14 +2,14 @@
 
 import React from 'react'
 import ProductHeading from './ProductHeading'
-import { useContent } from '@/app/context/ProductContext'
+import { useContextProvider } from '@/app/context/ProductContext'
 
 const ProductSummary = () => {
   const {
     item: {
       page_content: { item_summary },
     },
-  } = useContent()
+  } = useContextProvider()
 
   return (
     <div className="flex flex-col gap-1 text-sm">

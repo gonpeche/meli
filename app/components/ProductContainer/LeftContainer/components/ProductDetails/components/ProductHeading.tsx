@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { useContent } from '@/app/context/ProductContext'
+import { useContextProvider } from '@/app/context/ProductContext'
 
 const ProductHeading = () => {
   const {
@@ -10,7 +10,7 @@ const ProductHeading = () => {
         item_summary: { header, attributes },
       },
     },
-  } = useContent()
+  } = useContextProvider()
 
   return (
     <div className="flex flex-col gap-1 text-sm">

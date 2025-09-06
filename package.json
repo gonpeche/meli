@@ -11,10 +11,12 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.87.1",
     "lucide-react": "^0.542.0",
     "next": "15.5.2",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-query": "^3.39.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

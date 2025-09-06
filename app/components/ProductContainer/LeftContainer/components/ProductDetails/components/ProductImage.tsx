@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { useContent } from '@/app/context/ProductContext'
+import { useContextProvider } from '@/app/context/ProductContext'
 
 const ProductImage = () => {
   const {
@@ -10,7 +10,7 @@ const ProductImage = () => {
         item_image: { images },
       },
     },
-  } = useContent()
+  } = useContextProvider()
 
   const [selectedImage, setSelectedImage] = useState(0)
 

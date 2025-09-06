@@ -9,7 +9,7 @@ import {
   Fingerprint,
   ChevronDown,
 } from 'lucide-react'
-import { useContent } from '@/app/context/ProductContext'
+import { useContextProvider } from '@/app/context/ProductContext'
 
 interface SpecificationItemProps {
   icon: React.ReactNode
@@ -36,7 +36,7 @@ const ProductSpecifications = () => {
         item_summary: { product_specifications },
       },
     },
-  } = useContent()
+  } = useContextProvider()
 
   return (
     <div className="pt-8">

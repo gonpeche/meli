@@ -1,6 +1,6 @@
 import HeaderContainer from './components/HeaderContainer'
 import ProductContainer from './components/ProductContainer'
-import { ContentProvider } from './context/ProductContext'
+import { ContextProvider } from './context/ProductContext'
 
 export default async function Home() {
   // Fetch from our mock Edge CDN API
@@ -8,11 +8,11 @@ export default async function Home() {
   const { data } = await response.json()
 
   return (
-    <ContentProvider item={data}>
+    <ContextProvider item={data}>
       <div className="mx-auto w-full max-w-[1184px] min-w-[1184px] px-4">
         <HeaderContainer />
         <ProductContainer />
       </div>
-    </ContentProvider>
+    </ContextProvider>
   )
 }

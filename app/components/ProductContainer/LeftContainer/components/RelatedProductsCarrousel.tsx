@@ -1,68 +1,30 @@
+'use client'
+
 import React from 'react'
 import Card from '@/app/components/shared/Card'
 import Image from 'next/image'
-
-interface Product {
-  id: string
-  title: string
-  price: number
-  originalPrice?: number
-  discount?: number
-  image: string
-  installments?: {
-    amount: number
-    value: number
-  }
-  freeShipping?: boolean
-}
-
-const mockProducts: Product[] = [
-  {
-    id: '1',
-    title: 'Celular Tecno Pova 6 8gb Ram 256gb Rom Interstellar Blue',
-    price: 385999,
-    originalPrice: 419999,
-    discount: 8,
-    image: 'https://http2.mlstatic.com/D_Q_NP_2X_969304-MLA81434301874_122024-AB.webp',
-    installments: {
-      amount: 6,
-      value: 64333,
-    },
-    freeShipping: true,
-  },
-  {
-    id: '2',
-    title: 'Xiaomi Poco M6 8gb Ram 256gb Dual Sim Celular',
-    price: 330000,
-    image: 'https://http2.mlstatic.com/D_Q_NP_2X_898122-MLA89124725888_082025-AB.webp',
-    installments: {
-      amount: 3,
-      value: 128068,
-    },
-    freeShipping: true,
-  },
-  {
-    id: '3',
-    title: 'Tecno Spark 30c 128 + 4gb Magic Skin Green',
-    price: 199999,
-    originalPrice: 359999,
-    discount: 44,
-    image: 'https://http2.mlstatic.com/D_Q_NP_2X_652360-MLA89336670123_082025-AB.webp',
-    installments: {
-      amount: 3,
-      value: 77616,
-    },
-    freeShipping: true,
-  },
-]
+import { useRelatedProducts } from '@/hooks/useRelatedProducts'
+import { useContextProvider } from '@/app/context/ProductContext'
+import LoadingSkeleton from '@/app/components/shared/LoadingSkeleton'
 
 const RelatedProductsCarrousel = () => {
+  const { item } = useContextProvider()
+  const { data = [], isLoading, error } = useRelatedProducts(item.id)
+
+  if (isLoading) {
+    return <LoadingSkeleton />
+  }
+
+  if (error || data.length === 0) {
+    return null
+  }
+
   return (
     <div className="w-full">
       <h2 className="mb-4 text-2xl font-medium">Productos relacionados</h2>
       <p className="mb-6 text-gray-600">Promocionado</p>
       <div className="flex gap-4 overflow-x-auto pb-4">
-        {mockProducts.map((product) => (
+        {data.map((product) => (
           <Card
             key={product.id}
             className="max-w-[230px] cursor-pointer transition-shadow hover:shadow-lg"

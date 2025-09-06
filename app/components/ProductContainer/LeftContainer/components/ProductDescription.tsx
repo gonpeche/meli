@@ -1,6 +1,6 @@
 'use client'
 
-import { useContent } from '@/app/context/ProductContext'
+import { useContextProvider } from '@/app/context/ProductContext'
 import React from 'react'
 
 const ProductDescription = () => {
@@ -10,7 +10,7 @@ const ProductDescription = () => {
         item_summary: { product_description },
       },
     },
-  } = useContent()
+  } = useContextProvider()
   return (
     <div className="pt-8">
       <h2 className="mb-8 text-2xl font-medium">Descripción</h2>

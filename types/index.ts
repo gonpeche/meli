@@ -1,4 +1,5 @@
 export interface Item {
+  id: string
   header: {
     suggestions: string[]
     breadcrumbs: string[]
@@ -58,6 +59,22 @@ export interface Item {
   }
 }
 
-export interface ContentContextType {
+export interface ContextContextType {
   item: Item
 }
+
+export interface RelatedProduct {
+  id: string
+  title: string
+  price: number
+  originalPrice?: number
+  discount?: number
+  image: string
+  installments: {
+    amount: number
+    value: number
+  }
+  freeShipping: boolean
+}
+
+export type RelatedProducts = RelatedProduct[]
