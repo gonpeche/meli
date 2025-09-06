@@ -4,9 +4,6 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Mercado Libre',
   description: 'Product Page Mockup',
-  icons: {
-    icon: '/favicon.ico',
-  },
 }
 
 export default function RootLayout({

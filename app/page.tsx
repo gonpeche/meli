@@ -1,11 +1,11 @@
-import HeaderContainer from "./components/HeaderContainer";
-import ProductContainer from "./components/ProductContainer";
+import HeaderContainer from './components/HeaderContainer'
+import ProductContainer from './components/ProductContainer'
 
 export default function Home() {
   return (
-    <div className="flex flex-col border border-red-500 max-w-[1184px] mx-auto w-full">
+    <div className="mx-auto w-full max-w-[1184px] min-w-[1184px] px-4">
       <HeaderContainer />
       <ProductContainer />
     </div>
-  );
+  )
 }

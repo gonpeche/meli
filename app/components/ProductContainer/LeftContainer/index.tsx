@@ -7,13 +7,13 @@ import ProductDescription from './components/ProductDescription'
 
 const LeftContainer = () => {
   return (
-    <div>
+    <>
       <ProductDetails />
       <RelatedProductsCarrousel />
       <SellerProductsCarrousel />
       <ProductSpecifications />
       <ProductDescription />
-    </div>
+    </>
   )
 }
 

@@ -4,7 +4,7 @@ import RelatedSearch from './components/RelatedSearch'
 
 const HeaderContainer = () => {
   return (
-    <div>
+    <div className="hidden sm:flex sm:flex-col">
       <RelatedSearch />
       <Navigation />
     </div>
