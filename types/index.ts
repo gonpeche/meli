@@ -70,7 +70,7 @@ export interface RelatedProduct {
   id: string
   title: string
   price: number
-  originalPrice?: number
+  originalPrice: number
   discount?: number
   image: string
   installments: {
@@ -78,6 +78,8 @@ export interface RelatedProduct {
     value: number
   }
   freeShipping: boolean
+  fullDelivery?: boolean
+  promoted?: boolean
 }
 
 export type RelatedProducts = RelatedProduct[]
@@ -115,3 +117,21 @@ export interface PaymentMethodGroup {
 export interface PaymentOptionsResponse {
   data: PaymentMethodGroup[]
 }
+
+export interface RelatedProductsListItem {
+  id: string
+  title: string
+  image: string
+  originalPrice: number
+  price: number
+  discount?: number
+  installments: {
+    quantity: number
+    amount: number
+  }
+  freeShipping: boolean
+  fullDelivery?: boolean
+  promoted?: boolean
+}
+
+export type RelatedProductsList = RelatedProductsListItem[]

@@ -1,7 +1,7 @@
 import React from 'react'
 
 type LoadingSkeletonProps = {
-  type: 'relatedProducts' | 'sellerProducts' | 'paymentOptions'
+  type: 'relatedProducts' | 'sellerProducts' | 'paymentOptions' | 'relatedProductsList'
 }
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ type }) => {
@@ -68,6 +68,17 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ type }) => {
     </div>
   )
 
+  const RelatedProductsListSkeleton = () => (
+    <div className="animate-pulse space-y-5 p-1">
+      {[...Array(4)].map((_, i) => (
+        <div key={i} className="space-6 flex gap-2 p-2">
+          <div className="h-15 w-1/4 rounded bg-gray-200"></div>
+          <div className="h-15 w-3/4 rounded bg-gray-200"></div>
+        </div>
+      ))}
+    </div>
+  )
+
   const renderSkeleton = () => {
     switch (type) {
       case 'relatedProducts':
@@ -76,6 +87,8 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ type }) => {
         return <SellerProductsSkeleton />
       case 'paymentOptions':
         return <PaymentOptionsSkeleton />
+      case 'relatedProductsList':
+        return <RelatedProductsListSkeleton />
       default:
         return <PaymentOptionsSkeleton />
     }
