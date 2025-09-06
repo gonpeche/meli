@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import relatedProducts from '@/data/relatedProducts.json'
+import relatedProducts from '@/data/relatedProductsCarrousel.json'
 
 export async function GET(request: Request) {
   try {
