@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "title": "Samsung Galaxy A25 5g 128gb Azul Oscuro 6gb Ram",
+    "price": 699999,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_981119-MLA74556532513_022024-T.webp",
+    "installments": {
+      "quantity": 6,
+      "amount": 158602
+    }
+  },
+  {
+    "id": "2",
+    "title": "Samsung Galaxy A55 256gb Awesome Lilac 8gb Ram",
+    "price": 1197814,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_949261-MLU77500507682_072024-T.webp",
+    "installments": {
+      "quantity": 9,
+      "amount": 208976
+    }
+  }
+]

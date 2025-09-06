@@ -14,6 +14,9 @@ export async function GET(request: Request) {
       throw new Error('Related products data is not in the expected format')
     }
 
+    // Simulate data fetching time to trigger the loading state
+    await new Promise((resolve) => setTimeout(resolve, 2000))
+
     return NextResponse.json(
       {
         data: relatedProducts,

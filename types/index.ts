@@ -1,5 +1,8 @@
 export interface Item {
   id: string
+  seller: {
+    id: string
+  }
   header: {
     suggestions: string[]
     breadcrumbs: string[]
@@ -78,3 +81,19 @@ export interface RelatedProduct {
 }
 
 export type RelatedProducts = RelatedProduct[]
+
+export interface SellerProduct {
+  id: string
+  seller: {
+    id: string
+    name: string
+    logo: string
+  }
+  title: string
+  price: number
+  image: string
+  installments: {
+    quantity: number
+    amount: number
+  }
+}

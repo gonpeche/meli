@@ -1,42 +1,14 @@
+'use client'
+
 import React from 'react'
 import Card from '@/app/components/shared/Card'
 import Image from 'next/image'
+import LoadingSkeleton from '@/app/components/shared/LoadingSkeleton'
+import { useSellerProducts } from '@/hooks/useSellerProducts'
+import { SellerProduct } from '@/types'
+import { useContextProvider } from '@/app/context/ProductContext'
 
-type Product = {
-  id: string
-  title: string
-  price: number
-  image: string
-  installments: {
-    quantity: number
-    amount: number
-  }
-}
-
-const mockProducts: Product[] = [
-  {
-    id: '1',
-    title: 'Samsung Galaxy A25 5g 128gb Azul Oscuro 6gb Ram',
-    price: 699999,
-    image: 'https://http2.mlstatic.com/D_Q_NP_2X_981119-MLA74556532513_022024-T.webp',
-    installments: {
-      quantity: 6,
-      amount: 158602,
-    },
-  },
-  {
-    id: '2',
-    title: 'Samsung Galaxy A55 256gb Awesome Lilac 8gb Ram',
-    price: 1197814,
-    image: 'https://http2.mlstatic.com/D_Q_NP_2X_949261-MLU77500507682_072024-T.webp',
-    installments: {
-      quantity: 9,
-      amount: 208976,
-    },
-  },
-]
-
-const ProductCard = ({ product }: { product: Product }) => {
+const ProductCard = ({ product }: { product: SellerProduct }) => {
   return (
     <Card className="w-full cursor-pointer transition-shadow hover:shadow-md md:h-[140px] md:w-[350px]">
       <div className="flex h-full gap-4">
@@ -60,11 +32,22 @@ const ProductCard = ({ product }: { product: Product }) => {
 }
 
 const SellerProductsCarrousel = () => {
+  const { item } = useContextProvider()
+  const { data = [], isLoading, error } = useSellerProducts(item.id, item.seller.id)
+
+  if (isLoading) {
+    return <LoadingSkeleton />
+  }
+
+  if (error || data.length === 0) {
+    return null
+  }
+
   return (
     <div className="space-y-4 border border-red-500 pt-4">
       <h2 className="text-2xl font-medium">Productos de Samsung</h2>
       <div className="flex flex-col gap-4 pb-4 md:flex-row md:overflow-x-auto">
-        {mockProducts.map((product) => (
+        {data.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>

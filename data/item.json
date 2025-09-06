@@ -1,5 +1,10 @@
 {
   "id": "1",
+  "seller": {
+    "id": "1",
+    "name": "Samsung",
+    "logo": "https://http2.mlstatic.com/D_NQ_NP_887675-MLA74823588370_032024-G.jpg"
+  },
   "header": {
     "suggestions": [
       "telefonos samsung",
