@@ -1,10 +1,10 @@
 'use client'
 
 import React from 'react'
-import { useProduct } from '@/app/context/ProductContext'
+import { useContent } from '@/app/context/ProductContext'
 
 const RelatedSearch = () => {
-  const { item } = useProduct()
+  const { item } = useContent()
   const suggestions = item?.header?.suggestions || []
 
   return (

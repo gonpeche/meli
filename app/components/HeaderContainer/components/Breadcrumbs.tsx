@@ -1,10 +1,10 @@
 'use client'
 
 import React from 'react'
-import { useProduct } from '@/app/context/ProductContext'
+import { useContent } from '@/app/context/ProductContext'
 
 const Breadcrumbs = () => {
-  const { item } = useProduct()
+  const { item } = useContent()
   const crumbs = item?.header?.breadcrumbs || []
 
   return (

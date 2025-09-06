@@ -10,5 +10,74 @@
       "samsung tienda oficial"
     ],
     "breadcrumbs": ["Celulares y Teléfonos", "Celulares y Smartphones", "Samsung"]
+  },
+  "page_content": {
+    "item_image": {
+      "images": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_800035-MLA81367078349_122024-F.webp",
+        "https://http2.mlstatic.com/D_Q_NP_2X_621964-MLA81364948571_122024-R.webp",
+        "https://http2.mlstatic.com/D_Q_NP_2X_777643-MLA75395342152_042024-R.webp",
+        "https://http2.mlstatic.com/D_Q_NP_2X_725539-MLA80825742603_112024-R.webp",
+        "https://http2.mlstatic.com/D_Q_NP_2X_832248-MLA81366749957_122024-R.webp"
+      ]
+    },
+    "item_summary": {
+      "header": {
+        "title": "Samsung Galaxy A55 5G Dual SIM 256 GB Azul oscuro 8 GB RAM",
+        "rating": 4.8,
+        "reviews": 460
+      },
+      "attributes": {
+        "condition": "Nuevo",
+        "sold": "1000",
+        "favorite": false,
+        "color": "Azul oscuro",
+        "other_colors": ["lightpink", "lightgray", "lightblue"],
+        "features": [
+          "Memoria RAM: 8 GB.",
+          "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida.",
+          "Memoria interna de 256 GB."
+        ]
+      },
+      "buy_options": {
+        "new_products": 23,
+        "used_products": 1
+      },
+      "pricing": {
+        "price": 999999,
+        "installments": 6,
+        "installment_value": 226444,
+        "tax_free_price": 826445
+      },
+      "payment_options": {
+        "payment_methods": ["Tarjeta de crédito", "Tarjeta de débito", "Efectivo"],
+        "payment_methods_description": "Ver los medios de pago"
+      },
+      "product_specifications": {
+        "memory_ram": "8 GB",
+        "internal_memory": "256 GB",
+        "main_front_camera": "12 MP",
+        "main_rear_camera": "12 MP",
+        "unlock_methods": "Desbloqueo",
+        "nfc": true,
+        "screen_size": {
+          "value": "6.6 \"",
+          "dimensions": "(16.11 cm x 7.74 cm x 8.2 mm)",
+          "scale": 4
+        }
+      },
+      "product_description": {
+        "sections": [
+          {
+            "title": "Capacidad y eficiencia",
+            "content": "Con su potente procesador y 8 GB de RAM, su computadora logrará un alto rendimiento con una alta velocidad de transmisión de contenido y ejecutará varias aplicaciones al mismo tiempo, sin demoras."
+          },
+          {
+            "title": "Capacidad de almacenamiento ilimitada",
+            "content": "Olvídate de borrar. Con su memoria interna de 256 GB puedes descargar todos los archivos y aplicaciones que necesites, guardar fotos y almacenar tus películas, series y vídeos favoritos para reproducirlos cuando quieras."
+          }
+        ]
+      }
+    }
   }
 }

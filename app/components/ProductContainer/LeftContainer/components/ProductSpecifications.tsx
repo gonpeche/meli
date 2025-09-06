@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import {
   Scaling,
@@ -7,6 +9,7 @@ import {
   Fingerprint,
   ChevronDown,
 } from 'lucide-react'
+import { useContent } from '@/app/context/ProductContext'
 
 interface SpecificationItemProps {
   icon: React.ReactNode
@@ -26,21 +29,15 @@ const SpecificationItem: React.FC<SpecificationItemProps> = ({ icon, label, valu
   )
 }
 
-// Mock data for product specifications
-const productSpecifications = {
-  screenSize: {
-    value: '6.6 "',
-    dimensions: '(16.11 cm x 7.74 cm x 8.2 mm)',
-    scale: 4, // Scale from 1-5 to represent the progress bar position
-  },
-  internalMemory: '256 GB',
-  mainRearCamera: '50 Mpx',
-  mainFrontCamera: '32 Mpx',
-  unlockMethods: 'Huella dactilar y reconocimiento facial',
-  nfc: 'Sí',
-}
-
 const ProductSpecifications = () => {
+  const {
+    item: {
+      page_content: {
+        item_summary: { product_specifications },
+      },
+    },
+  } = useContent()
+
   return (
     <div className="pt-8">
       <h2 className="mb-4 text-2xl font-medium">Características del producto</h2>
@@ -50,9 +47,9 @@ const ProductSpecifications = () => {
           <Scaling className="h-6 w-6 text-gray-600" />
           <div>
             <p className="font-medium">
-              Tamaño de la pantalla: {productSpecifications.screenSize.value}
+              Tamaño de la pantalla: {product_specifications.screen_size.value}
             </p>
-            <p className="text-gray-600">{productSpecifications.screenSize.dimensions}</p>
+            <p className="text-gray-600">{product_specifications.screen_size.dimensions}</p>
           </div>
         </div>
         <div className="mt-4 pl-10">
@@ -61,7 +58,7 @@ const ProductSpecifications = () => {
             <div className="h-2 flex-1 rounded-full bg-gray-200">
               <div
                 className="h-full rounded-full bg-[#3483fa]"
-                style={{ width: `${(productSpecifications.screenSize.scale / 5) * 100}%` }}
+                style={{ width: `${(product_specifications.screen_size.scale / 5) * 100}%` }}
               />
             </div>
             <span className="ml-4 text-sm text-gray-600">GRANDE</span>
@@ -73,31 +70,31 @@ const ProductSpecifications = () => {
         <SpecificationItem
           icon={<MemoryStick className="h-6 w-6 text-gray-600" />}
           label="Memoria interna"
-          value={productSpecifications.internalMemory}
+          value={product_specifications.internal_memory}
         />
 
         <SpecificationItem
           icon={<Smartphone className="h-6 w-6 text-gray-600" />}
           label="Cámara frontal principal"
-          value={productSpecifications.mainFrontCamera}
+          value={product_specifications.main_front_camera}
         />
 
         <SpecificationItem
           icon={<Smartphone className="h-6 w-6 text-gray-600" />}
           label="Cámara trasera principal"
-          value={productSpecifications.mainRearCamera}
+          value={product_specifications.main_rear_camera}
         />
 
         <SpecificationItem
           icon={<Fingerprint className="h-6 w-6 text-gray-600" />}
           label="Desbloqueo"
-          value={productSpecifications.unlockMethods}
+          value={product_specifications.unlock_methods}
         />
 
         <SpecificationItem
           icon={<SmartphoneNfc className="h-6 w-6 text-gray-600" />}
           label="Con NFC"
-          value={productSpecifications.nfc}
+          value={product_specifications.nfc}
         />
       </div>
 

@@ -1,26 +1,24 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
+import { useContent } from '@/app/context/ProductContext'
 
 const ProductImage = () => {
-  const [selectedImage, setSelectedImage] = useState(0)
+  const {
+    item: {
+      page_content: {
+        item_image: { images },
+      },
+    },
+  } = useContent()
 
-  const images = [
-    'https://http2.mlstatic.com/D_NQ_NP_2X_800035-MLA81367078349_122024-F.webp',
-    'https://http2.mlstatic.com/D_Q_NP_2X_621964-MLA81364948571_122024-R.webp',
-    'https://http2.mlstatic.com/D_Q_NP_2X_777643-MLA75395342152_042024-R.webp',
-    'https://http2.mlstatic.com/D_Q_NP_2X_725539-MLA80825742603_112024-R.webp',
-    'https://http2.mlstatic.com/D_Q_NP_2X_832248-MLA81366749957_122024-R.webp',
-    'https://http2.mlstatic.com/D_Q_NP_2X_780712-MLA81099188364_122024-R.webp',
-    'https://http2.mlstatic.com/D_Q_NP_2X_818960-MLA81099131368_122024-R.webp',
-    'https://http2.mlstatic.com/D_Q_NP_2X_868167-MLA81099064398_122024-R.webp',
-  ]
+  const [selectedImage, setSelectedImage] = useState(0)
 
   return (
     <div className="flex gap-4">
       {/* Thumbnails */}
       <div className="flex flex-col gap-2">
-        {images.map((src, index) => (
+        {images.map((image, index) => (
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
@@ -30,7 +28,7 @@ const ProductImage = () => {
             } hover:border-blue-500 focus:border-blue-500`}
           >
             <Image
-              src={src}
+              src={image}
               alt={`Product thumbnail ${index + 1}`}
               fill
               className="object-contain"
