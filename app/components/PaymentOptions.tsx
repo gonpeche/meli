@@ -1,12 +1,12 @@
 'use client'
 
 import React from 'react'
-import Card from '@/app/components/shared/Card'
+import Card from '@/app/components/ui/Card'
 import Image from 'next/image'
-import { usePaymentOptions } from '@/hooks/usePaymentOptions'
+import { usePaymentOptions } from '@/app/hooks/usePaymentOptions'
 import { useContextProvider } from '@/app/context/ProductContext'
 import { PaymentMethod } from '@/types'
-import LoadingSkeleton from '@/app/components/shared/LoadingSkeleton'
+import LoadingSkeleton from '@/app/components/ui/LoadingSkeleton'
 
 const PaymentMethodSection = ({ title, methods }: { title: string; methods: PaymentMethod[] }) => {
   return (

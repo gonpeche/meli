@@ -1,4 +1,4 @@
-import Card from '@/app/components/shared/Card'
+import Card from '@components/ui/Card'
 import { Check, Truck, Clock, BadgeCheck } from 'lucide-react'
 import Image from 'next/image'
 

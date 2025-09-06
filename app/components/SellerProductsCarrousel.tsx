@@ -1,10 +1,10 @@
 'use client'
 
 import React from 'react'
-import Card from '@/app/components/shared/Card'
+import Card from '@components/ui/Card'
 import Image from 'next/image'
-import LoadingSkeleton from '@/app/components/shared/LoadingSkeleton'
-import { useSellerProducts } from '@/hooks/useSellerProducts'
+import LoadingSkeleton from '@components/ui/LoadingSkeleton'
+import { useSellerProducts } from '@/app/hooks/useSellerProducts'
 import { SellerProduct } from '@/types'
 import { useContextProvider } from '@/app/context/ProductContext'
 

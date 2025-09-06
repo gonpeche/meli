@@ -1,6 +1,6 @@
 import React from 'react'
 import { ChevronRight } from 'lucide-react'
-import Card from '@/app/components/shared/Card'
+import Card from '@components/ui/Card'
 
 const mockData = {
   optionsCount: 29,

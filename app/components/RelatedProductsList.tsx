@@ -2,10 +2,10 @@
 
 import React from 'react'
 import Image from 'next/image'
-import Card from '@/app/components/shared/Card'
-import { useRelatedProducts } from '@/hooks/useRelatedProducts'
+import Card from '@components/ui/Card'
+import { useRelatedProducts } from '@/app/hooks/useRelatedProducts'
 import { useContextProvider } from '@/app/context/ProductContext'
-import LoadingSkeleton from '@/app/components/shared/LoadingSkeleton'
+import LoadingSkeleton from '@components/ui/LoadingSkeleton'
 import { RelatedProduct } from '@/types'
 
 const ProductCard = ({ product }: { product: RelatedProduct }) => {

@@ -1,11 +1,11 @@
 'use client'
 
 import React from 'react'
-import Card from '@/app/components/shared/Card'
+import Card from '@components/ui/Card'
 import Image from 'next/image'
-import { useRelatedProducts } from '@/hooks/useRelatedProducts'
+import { useRelatedProducts } from '@/app/hooks/useRelatedProducts'
 import { useContextProvider } from '@/app/context/ProductContext'
-import LoadingSkeleton from '@/app/components/shared/LoadingSkeleton'
+import LoadingSkeleton from '@components/ui/LoadingSkeleton'
 
 const RelatedProductsCarrousel = () => {
   const { item } = useContextProvider()

@@ -17,7 +17,7 @@ const ProductImage = () => {
   return (
     <div className="flex gap-4">
       {/* Thumbnails */}
-      <div className="flex flex-col gap-2">
+      <div className="hidden flex-col gap-2 md:flex">
         {images.map((image, index) => (
           <button
             key={index}
@@ -39,7 +39,7 @@ const ProductImage = () => {
       </div>
 
       {/* Main Image */}
-      <div className="relative aspect-square w-[350px]">
+      <div className="relative aspect-square w-full bg-white md:w-[350px]">
         <Image
           src={images[selectedImage]}
           alt="Product image"
