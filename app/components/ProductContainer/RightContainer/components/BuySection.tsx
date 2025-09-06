@@ -1,5 +1,5 @@
 import React from 'react'
-import { BadgeCheck, ChevronDown, ChevronRight, RotateCcw, ShieldCheck } from 'lucide-react'
+import { BadgeCheck, ChevronDown, RotateCcw, ShieldCheck } from 'lucide-react'
 
 const mockData = {
   delivery: {

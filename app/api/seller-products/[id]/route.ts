@@ -16,7 +16,7 @@ export async function GET(request: Request) {
     }
 
     // Simulate data fetching time to trigger the loading state
-    await new Promise((resolve) => setTimeout(resolve, 3000))
+    await new Promise((resolve) => setTimeout(resolve, 1800))
 
     return NextResponse.json(
       {

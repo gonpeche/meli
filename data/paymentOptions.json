@@ -1,0 +1,96 @@
+[
+  {
+    "id": "mercadoPago",
+    "title": "Cuotas sin Tarjeta",
+    "methods": [
+      {
+        "name": "Mercado Pago",
+        "logo": "https://http2.mlstatic.com/storage/logos-api-admin/f3e8e940-f549-11ef-bad6-e9962bcd76e5-m.svg",
+        "alt": "Mercado Pago",
+        "width": 80,
+        "height": 20
+      }
+    ]
+  },
+  {
+    "id": "creditCards",
+    "title": "Tarjetas de crédito",
+    "methods": [
+      {
+        "name": "Visa Credit",
+        "logo": "https://http2.mlstatic.com/storage/logos-api-admin/a5f047d0-9be0-11ec-aad4-c3381f368aaf-m.svg",
+        "alt": "Visa",
+        "width": 48,
+        "height": 30
+      },
+      {
+        "name": "American Express",
+        "logo": "https://http2.mlstatic.com/storage/logos-api-admin/b2c93a40-f3be-11eb-9984-b7076edb0bb7-m.svg",
+        "alt": "American Express",
+        "width": 48,
+        "height": 30
+      },
+      {
+        "name": "Mastercard",
+        "logo": "https://http2.mlstatic.com/storage/logos-api-admin/aa2b8f70-5c85-11ec-ae75-df2bef173be2-m.svg",
+        "alt": "Mastercard",
+        "width": 48,
+        "height": 30
+      },
+      {
+        "name": "Naranja",
+        "logo": "https://http2.mlstatic.com/storage/logos-api-admin/992bc350-f3be-11eb-826e-6db365b9e0dd-m.svg",
+        "alt": "Naranja",
+        "width": 48,
+        "height": 30
+      }
+    ]
+  },
+  {
+    "id": "debitCards",
+    "title": "Tarjetas de débito",
+    "methods": [
+      {
+        "name": "Visa Debit",
+        "logo": "https://http2.mlstatic.com/storage/logos-api-admin/312238e0-571b-11e8-823a-758d95db88db-m.svg",
+        "alt": "Visa Débito",
+        "width": 48,
+        "height": 30
+      },
+      {
+        "name": "Maestro",
+        "logo": "https://http2.mlstatic.com/storage/logos-api-admin/ce454480-445f-11eb-bf78-3b1ee7bf744c-m.svg",
+        "alt": "Maestro",
+        "width": 48,
+        "height": 30
+      },
+      {
+        "name": "Mastercard Debit",
+        "logo": "https://http2.mlstatic.com/storage/logos-api-admin/157dce60-571b-11e8-95d8-631c1a9a92a9-m.svg",
+        "alt": "Mastercard Débito",
+        "width": 48,
+        "height": 30
+      }
+    ]
+  },
+  {
+    "id": "cash",
+    "title": "Efectivo",
+    "methods": [
+      {
+        "name": "PagoFacil",
+        "logo": "https://http2.mlstatic.com/storage/logos-api-admin/fec5f230-06ee-11ea-8e1e-273366cc763d-m.svg",
+        "alt": "Pago Fácil",
+        "width": 48,
+        "height": 30
+      },
+      {
+        "name": "Rapipago",
+        "logo": "https://http2.mlstatic.com/storage/logos-api-admin/312238e0-571b-11e8-823a-758d95db88db-m.svg",
+        "alt": "Rapipago",
+        "width": 48,
+        "height": 30
+      }
+    ]
+  }
+]

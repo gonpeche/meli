@@ -97,3 +97,21 @@ export interface SellerProduct {
     amount: number
   }
 }
+
+export interface PaymentMethod {
+  name: string
+  logo: string
+  alt: string
+  width: number
+  height: number
+}
+
+export interface PaymentMethodGroup {
+  id: string
+  title: string
+  methods: PaymentMethod[]
+}
+
+export interface PaymentOptionsResponse {
+  data: PaymentMethodGroup[]
+}

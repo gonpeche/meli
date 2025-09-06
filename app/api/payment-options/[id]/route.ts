@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import relatedProducts from '@/data/relatedProducts.json'
+import paymentOptions from '@/data/paymentOptions.json'
 
 export async function GET(request: Request) {
   try {
@@ -7,29 +7,25 @@ export async function GET(request: Request) {
       const { searchParams } = new URL(request.url)
       const productId = searchParams.get('id')
       Placing the ID here just because the data is hardcoded. 
-      In a real scenario, I would fetch the related products from the database.
+      In a real scenario, I would fetch the payment options from the database.
     */
 
-    if (!Array.isArray(relatedProducts)) {
-      throw new Error('Related products data is not in the expected format')
-    }
-
     // Simulate data fetching time to trigger the loading state
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    await new Promise((resolve) => setTimeout(resolve, 1000))
 
     return NextResponse.json(
       {
-        data: relatedProducts,
+        data: paymentOptions,
       },
       {
         status: 200,
       }
     )
   } catch (error) {
-    console.error('Error fetching related products:', error)
+    console.error('Error fetching payment options:', error)
     return NextResponse.json(
       {
-        error: 'Failed to fetch related products',
+        error: 'Failed to fetch payment options',
         data: [],
       },
       {

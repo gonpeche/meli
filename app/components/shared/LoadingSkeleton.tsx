@@ -1,7 +1,7 @@
 import React from 'react'
 
 type LoadingSkeletonProps = {
-  type: 'relatedProducts' | 'sellerProducts'
+  type: 'relatedProducts' | 'sellerProducts' | 'paymentOptions'
 }
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ type }) => {
@@ -29,7 +29,7 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ type }) => {
       <div className="mb-4 h-8 w-1/3 rounded bg-gray-200" /> {/* Title */}
       <div className="mb-6 h-4 w-1/4 rounded bg-gray-200" /> {/* Subtitle */}
       {/* Products List */}
-      <div className="flex gap-4">
+      <div className="flex flex-col gap-4">
         {[1, 2].map((i) => (
           <div
             key={i}
@@ -53,11 +53,36 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ type }) => {
     </div>
   )
 
-  return (
-    <div className="w-full animate-pulse">
-      {type === 'relatedProducts' ? <RelatedProductsSkeleton /> : <SellerProductsSkeleton />}
+  const PaymentOptionsSkeleton = () => (
+    <div className="animate-pulse space-y-6 p-5">
+      <div className="h-4 w-1/3 rounded bg-gray-200"></div>
+      {[...Array(3)].map((_, i) => (
+        <div key={i} className="space-y-2">
+          <div className="h-3 w-1/4 rounded bg-gray-200"></div>
+          <div className="flex gap-4">
+            {[...Array(3)].map((_, j) => (
+              <div key={j} className="h-8 w-12 rounded bg-gray-200"></div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   )
+
+  const renderSkeleton = () => {
+    switch (type) {
+      case 'relatedProducts':
+        return <RelatedProductsSkeleton />
+      case 'sellerProducts':
+        return <SellerProductsSkeleton />
+      case 'paymentOptions':
+        return <PaymentOptionsSkeleton />
+      default:
+        return <PaymentOptionsSkeleton />
+    }
+  }
+
+  return <div className="w-full animate-pulse">{renderSkeleton()}</div>
 }
 
 export default LoadingSkeleton
