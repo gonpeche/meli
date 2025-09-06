@@ -12,7 +12,7 @@ const RelatedProductsCarrousel = () => {
   const { data = [], isLoading, error } = useRelatedProducts(item.id)
 
   if (isLoading) {
-    return <LoadingSkeleton />
+    return <LoadingSkeleton type="relatedProducts" />
   }
 
   if (error || data.length === 0) {

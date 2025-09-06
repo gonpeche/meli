@@ -36,7 +36,7 @@ const SellerProductsCarrousel = () => {
   const { data = [], isLoading, error } = useSellerProducts(item.id, item.seller.id)
 
   if (isLoading) {
-    return <LoadingSkeleton />
+    return <LoadingSkeleton type="sellerProducts" />
   }
 
   if (error || data.length === 0) {
