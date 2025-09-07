@@ -16,7 +16,7 @@ const DesktopTemplate = () => {
         <div className="flex-1">
           <LeftContainer />
         </div>
-        <div className="flex-nonemd:w-[325px] w-full">
+        <div className="w-full flex-none md:w-[325px]">
           <RightContainer />
         </div>
       </Card>

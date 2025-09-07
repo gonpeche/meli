@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { useContextProvider } from '@/app/context/ProductContext'
+import { Heart } from 'lucide-react'
 
 const ProductHeading = () => {
   const {
@@ -12,28 +13,72 @@ const ProductHeading = () => {
     },
   } = useContextProvider()
 
-  return (
-    <div className="flex flex-col gap-1 text-sm">
-      {/* Status and Favorite */}
+  const reviews = () => {
+    return (
+      <div className="flex items-center">
+        <span className="md:text-md pr-1 text-sm">{header.rating}</span>
+        <div className="flex text-sm text-blue-500 md:text-blue-500">
+          {'★'.repeat(Math.ceil(header.rating))}
+        </div>
+        <span className="pl-1 text-sm text-gray-500">({header.reviews})</span>
+      </div>
+    )
+  }
+
+  const status = () => {
+    return (
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2 text-gray-500">
+        <div className="flex items-center gap-2 text-xs text-gray-500">
           <span>{attributes.condition}</span>
           <span>|</span>
-          <span>{attributes.sold} vendidos</span>
+          <span>+{attributes.sold} vendidos</span>
         </div>
-        <button className="text-2xl text-gray-400 hover:text-blue-500">
-          {attributes.favorite ? '♥' : '♡'}
-        </button>
       </div>
+    )
+  }
 
-      {/* Title */}
-      <h1 className="text-md leading-7 font-semibold md:text-[22px]">{header.title}</h1>
+  const favorite = () => {
+    return <Heart className="h-6 w-6" fill={'white'} stroke={'#3483fa'} strokeWidth={1.5} />
+  }
 
-      {/* Rating */}
-      <div className="flex items-center gap-2">
-        <span className="text-md">{header.rating}</span>
-        <div className="flex text-blue-500">{'★'.repeat(Math.ceil(header.rating))}</div>
-        <span className="text-gray-500">({header.reviews})</span>
+  const title = () => {
+    return <h1 className="text-sm leading-7 md:text-[21px] md:font-semibold">{header.title}</h1>
+  }
+
+  const MobileHeading = () => {
+    return (
+      <div className="flex flex-col bg-white p-3">
+        <div className="flex flex-row justify-between gap-1 pb-2 text-sm">
+          {status()}
+          {reviews()}
+        </div>
+        {title()}
+      </div>
+    )
+  }
+
+  const DesktopHeading = () => {
+    return (
+      <div className="pt-4">
+        <div className="flex flex-row justify-between gap-1 pb-3 text-sm">
+          {status()}
+          {favorite()}
+        </div>
+        <div className="flex flex-col gap-1 pb-1 text-sm">
+          {title()}
+          {reviews()}
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div>
+      <div className="md:hidden">
+        <MobileHeading />
+      </div>
+      <div className="hidden md:block">
+        <DesktopHeading />
       </div>
     </div>
   )

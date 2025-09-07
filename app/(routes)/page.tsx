@@ -9,15 +9,13 @@ export default async function Home() {
 
   return (
     <ContextProvider item={data}>
-      <div>
-        <div className="hidden md:block">
-          <div className="mx-auto w-full max-w-[1184px] min-w-[1184px] px-4">
-            <DesktopTemplate />
-          </div>
+      <div className="hidden md:block">
+        <div className="mx-auto w-full max-w-[1184px] min-w-[1184px] px-4">
+          <DesktopTemplate />
         </div>
-        <div className="block md:hidden">
-          <MobileTemplate />
-        </div>
+      </div>
+      <div className="block md:hidden">
+        <MobileTemplate />
       </div>
     </ContextProvider>
   )
