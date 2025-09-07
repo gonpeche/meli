@@ -22,8 +22,8 @@ const SpecificationItem: React.FC<SpecificationItemProps> = ({ icon, label, valu
     <div className="flex items-center gap-3 md:gap-4">
       {icon}
       <div>
-        <span className="text-sm text-gray-600 md:text-lg">{label}:</span>
-        <span className="pl-2 text-sm font-medium md:text-lg">{value}</span>
+        <span className="md:text-md text-sm text-gray-600">{label}:</span>
+        <span className="md:text-md pl-2 text-sm font-medium">{value}</span>
       </div>
     </div>
   )
@@ -39,8 +39,8 @@ const ProductSpecifications = () => {
   } = useContextProvider()
 
   return (
-    <div className="p-4 md:pt-8">
-      <h2 className="mb-4 text-lg font-medium md:text-2xl">Características del producto</h2>
+    <div className="p-4 md:p-0 md:pt-8">
+      <h2 className="mb-4 text-lg font-medium md:text-xl">Características del producto</h2>
       {/* Screen Size with Progress Bar */}
       <div className="mb-8">
         <div className="mb-2 flex items-center gap-4">

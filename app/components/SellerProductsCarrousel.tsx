@@ -44,7 +44,7 @@ const SellerProductsCarrousel = () => {
   }
 
   return (
-    <div className="space-y-4 p-4 md:pt-4">
+    <div className="md:text-md space-y-4 p-4 md:p-0 md:pt-3">
       <h2 className="text-lg font-normal md:text-2xl md:font-medium">Productos de Samsung</h2>
       <div className="flex flex-col gap-4 pb-4 md:flex-row md:overflow-x-auto">
         {data.map((product) => (

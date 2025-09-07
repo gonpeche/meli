@@ -20,11 +20,11 @@ const RelatedProductsCarrousel = () => {
   }
 
   return (
-    <div className="w-full p-4 md:p-0">
-      <h2 className="mb-1 text-lg font-normal md:mb-4 md:text-2xl md:font-medium">
+    <div className="w-full p-4 md:mt-8 md:border-t md:border-gray-200 md:p-0 md:pt-7">
+      <h2 className="mb-1 text-lg font-normal md:mb-1 md:text-2xl md:font-medium">
         Productos relacionados
       </h2>
-      <p className="mb-4 text-xs text-gray-600 md:mb-6 md:text-lg">Promocionado</p>
+      <p className="md:text-md mb-4 text-xs text-gray-600 md:mb-6">Promocionado</p>
       <div className="flex gap-4 overflow-x-auto pb-4">
         {data.map((product) => (
           <Card
@@ -37,23 +37,24 @@ const RelatedProductsCarrousel = () => {
                 alt={product.title}
                 width={300}
                 height={192}
-                className="h-48 w-full object-contain"
+                className="h-48 w-full object-contain md:border-b md:border-gray-200"
               />
               <p className="mt-1 line-clamp-2 text-xs text-gray-700 md:text-sm">{product.title}</p>
               <div className="mt-2">
+                {product.originalPrice && (
+                  <span className="md:text-md text-xs text-gray-400 line-through">
+                    $ {product.originalPrice.toLocaleString()}
+                  </span>
+                )}
                 <div className="flex items-baseline gap-2">
                   <span className="text-lg md:text-2xl">${product.price.toLocaleString()}</span>
                   {product.discount && (
-                    <span className="text-xs text-green-500 md:text-lg">
+                    <span className="md:text-md text-xs text-green-500">
                       {product.discount}% OFF
                     </span>
                   )}
                 </div>
-                {product.originalPrice && (
-                  <span className="text-xs text-gray-400 line-through md:text-lg">
-                    $ {product.originalPrice.toLocaleString()}
-                  </span>
-                )}
+
                 {product.installments && (
                   <p className="text-sm text-gray-600">
                     en {product.installments.amount} cuotas sin tarjeta de ${' '}
@@ -61,7 +62,9 @@ const RelatedProductsCarrousel = () => {
                   </p>
                 )}
                 {product.freeShipping && (
-                  <p className="mt-1 text-xs text-green-500 md:text-lg">Envío gratis ⚡ FULL</p>
+                  <p className="md:text-md mt-1 text-xs font-semibold text-green-600">
+                    Envío gratis
+                  </p>
                 )}
               </div>
             </div>
