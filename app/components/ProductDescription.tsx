@@ -12,13 +12,17 @@ const ProductDescription = () => {
     },
   } = useContextProvider()
   return (
-    <div className="pt-8">
-      <h2 className="mb-8 text-2xl font-medium">Descripción</h2>
+    <div className="p-4 pt-8 md:pt-8">
+      <h2 className="mb-6 text-lg font-normal md:mb-8 md:text-2xl md:font-medium">Descripción</h2>
       <div className="flex flex-col gap-6">
         {product_description.sections.map((section, index) => (
           <div key={index}>
-            <h3 className="mb-2 text-lg text-gray-600">{section.title}</h3>
-            <p className="text-gray-600">{section.content}</p>
+            <h3 className="text-md mb-2 font-normal text-gray-600 md:text-xl md:font-normal">
+              {section.title}
+            </h3>
+            <p className="text-sm font-light text-gray-600 md:text-lg md:font-normal">
+              {section.content}
+            </p>
           </div>
         ))}
       </div>

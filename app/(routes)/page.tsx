@@ -14,7 +14,7 @@ export default async function Home() {
           <DesktopTemplate />
         </div>
       </div>
-      <div className="block md:hidden">
+      <div className="block bg-white md:hidden">
         <MobileTemplate />
       </div>
     </ContextProvider>

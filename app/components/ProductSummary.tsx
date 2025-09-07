@@ -3,6 +3,7 @@
 import React from 'react'
 import ProductHeading from './ProductHeading'
 import { useContextProvider } from '@/app/context/ProductContext'
+import PriceSection from './PriceSection'
 
 const ProductSummary = () => {
   const {
@@ -15,20 +16,7 @@ const ProductSummary = () => {
     <div className="flex flex-col gap-1 text-sm">
       <ProductHeading />
       {/* Price Section */}
-      <div className="flex flex-col gap-1">
-        <span className="text-[36px] font-light">$ {item_summary.pricing.price}</span>
-        <p className="text-lg">
-          {item_summary.pricing.installments} cuotas de{' '}
-          <span className="font-semibold">$ {item_summary.pricing.installment_value}</span>
-          <sup>11</sup> sin tarjeta
-        </p>
-        <p className="text-gray-500">
-          Precio sin impuestos nacionales: $ {item_summary.pricing.tax_free_price}
-        </p>
-        <a href="#" className="text-blue-500 hover:text-blue-600">
-          Ver los medios de pago
-        </a>
-      </div>
+      <PriceSection />
 
       {/* Color Selection */}
       <div className="flex flex-col gap-3">

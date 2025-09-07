@@ -28,7 +28,7 @@ const ProductHeading = () => {
   const status = () => {
     return (
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2 text-xs text-gray-500">
+        <div className="flex items-center gap-1 text-xs text-gray-500">
           <span>{attributes.condition}</span>
           <span>|</span>
           <span>+{attributes.sold} vendidos</span>

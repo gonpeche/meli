@@ -23,7 +23,7 @@ const SellerDetails = () => {
   }
 
   return (
-    <Card>
+    <Card className="flex items-center justify-center">
       <div className="w-full max-w-sm cursor-pointer overflow-hidden rounded-lg bg-white">
         {/* Header with logo placeholder */}
         <div className="relative h-20 bg-black">

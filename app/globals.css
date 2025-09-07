@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   --background: #ededed;
@@ -37,5 +38,9 @@ body {
 
   .btn-secondary {
     @apply w-full rounded-lg bg-[#e3edfb] py-3.5 text-[#3483fa] hover:cursor-pointer hover:bg-blue-100;
+  }
+
+  .action-link {
+    @apply text-sm text-[#3483fa] hover:cursor-pointer hover:text-blue-600;
   }
 }

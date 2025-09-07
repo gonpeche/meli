@@ -9,7 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Proxima Nova', '-apple-system', 'Roboto', 'Arial', 'sans-serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'Roboto', 'Arial', 'sans-serif'],
+      },
+      fontWeight: {
+        thin: '100',
+        extralight: '200',
       },
     },
   },

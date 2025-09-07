@@ -20,14 +20,16 @@ const RelatedProductsCarrousel = () => {
   }
 
   return (
-    <div className="w-full">
-      <h2 className="mb-4 text-2xl font-medium">Productos relacionados</h2>
-      <p className="mb-6 text-gray-600">Promocionado</p>
+    <div className="w-full p-4 md:p-0">
+      <h2 className="mb-1 text-lg font-normal md:mb-4 md:text-2xl md:font-medium">
+        Productos relacionados
+      </h2>
+      <p className="mb-4 text-xs text-gray-600 md:mb-6 md:text-lg">Promocionado</p>
       <div className="flex gap-4 overflow-x-auto pb-4">
         {data.map((product) => (
           <Card
             key={product.id}
-            className="max-w-[230px] cursor-pointer transition-shadow hover:shadow-lg"
+            className="max-w-[200px] min-w-[200px] cursor-pointer transition-shadow hover:shadow-lg md:max-w-[250px] md:min-w-[250px]"
           >
             <div className="flex flex-col gap-2">
               <Image
@@ -37,16 +39,18 @@ const RelatedProductsCarrousel = () => {
                 height={192}
                 className="h-48 w-full object-contain"
               />
-              <p className="mt-1 line-clamp-2 text-sm text-gray-700">{product.title}</p>
+              <p className="mt-1 line-clamp-2 text-xs text-gray-700 md:text-sm">{product.title}</p>
               <div className="mt-2">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-2xl">$ {product.price.toLocaleString()}</span>
+                  <span className="text-lg md:text-2xl">${product.price.toLocaleString()}</span>
                   {product.discount && (
-                    <span className="text-green-500">{product.discount}% OFF</span>
+                    <span className="text-xs text-green-500 md:text-lg">
+                      {product.discount}% OFF
+                    </span>
                   )}
                 </div>
                 {product.originalPrice && (
-                  <span className="text-gray-400 line-through">
+                  <span className="text-xs text-gray-400 line-through md:text-lg">
                     $ {product.originalPrice.toLocaleString()}
                   </span>
                 )}
@@ -57,7 +61,7 @@ const RelatedProductsCarrousel = () => {
                   </p>
                 )}
                 {product.freeShipping && (
-                  <p className="mt-1 text-green-500">Envío gratis ⚡ FULL</p>
+                  <p className="mt-1 text-xs text-green-500 md:text-lg">Envío gratis ⚡ FULL</p>
                 )}
               </div>
             </div>

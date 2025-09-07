@@ -12,10 +12,10 @@ const OtherSellersBuyOptions = () => {
   const formattedPrice = mockData.startingPrice.toLocaleString('es-AR')
 
   return (
-    <Card>
+    <Card className="bg-white p-0">
       <div className="space-y-2">
         <h3 className="text-md font-medium">Otras opciones de compra</h3>
-        <button className="flex w-full items-center text-sm text-[#3483fa] hover:cursor-pointer hover:text-blue-600">
+        <button className="action-link flex w-full items-center">
           <span>
             Ver {mockData.optionsCount} opciones desde $ {formattedPrice}
           </span>

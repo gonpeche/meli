@@ -22,7 +22,7 @@ const mockData = {
 
 const BuySection = () => {
   return (
-    <Card className="rounded-lg bg-white p-6">
+    <Card className="rounded-lg border-0 bg-white p-2 md:border-1 md:p-6">
       {/* Delivery Info */}
       <div className="mb-6">
         <div className="mb-2">
@@ -56,7 +56,7 @@ const BuySection = () => {
 
       {/* Seller Info */}
       <div className="mb-6">
-        <div className="mb-1 flex gap-2">
+        <div className="md:text-md mb-0 flex gap-2 text-sm md:mb-1">
           <span>Vendido por </span>
           <button className="flex items-center gap-1 text-[#3483fa] hover:text-blue-600">
             {mockData.seller.name}{' '}
@@ -69,14 +69,14 @@ const BuySection = () => {
       {/* Protection Info */}
       <div className="flex flex-col gap-4 text-sm">
         <div className="flex items-start gap-2">
-          <RotateCcw className="mt-1 h-5 w-5 text-[#3483fa]" />
+          <RotateCcw className="mt-1 h-4 w-4 text-[#3483fa] md:h-5 md:w-5" />
           <div>
             <span className="text-[#3483fa]">Devolución gratis.</span>
             <span className="text-gray-500"> Tenés 30 días desde que lo recibís.</span>
           </div>
         </div>
         <div className="flex items-start gap-2">
-          <ShieldCheck className="mt-1 h-8 w-8 text-[#3483fa]" />
+          <ShieldCheck className="mt-1 h-4 w-4 text-[#3483fa] md:h-5 md:w-5" />
           <div>
             <span className="text-[#3483fa]">Compra Protegida,</span>
             <span className="text-gray-500">
