@@ -14,6 +14,10 @@ const ProductImage = () => {
 
   const [selectedImage, setSelectedImage] = useState(0)
 
+  if (!images || images.length === 0) {
+    return null
+  }
+
   return (
     <div className="flex gap-4">
       {/* Thumbnails */}

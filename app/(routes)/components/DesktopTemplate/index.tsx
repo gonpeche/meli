@@ -7,7 +7,7 @@ import Card from '@/app/components/ui/Card'
 
 const DesktopTemplate = () => {
   return (
-    <>
+    <div data-testid="desktop-template">
       <div>
         <RelatedSearch />
         <Navigation />
@@ -20,7 +20,7 @@ const DesktopTemplate = () => {
           <RightContainer />
         </div>
       </Card>
-    </>
+    </div>
   )
 }
 

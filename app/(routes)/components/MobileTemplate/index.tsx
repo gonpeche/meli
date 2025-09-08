@@ -13,7 +13,7 @@ import ProductDescription from '@/app/components/ProductDescription'
 
 const MobileTemplate = () => {
   return (
-    <>
+    <div data-testid="mobile-template">
       <ProductHeading />
       <ProductImage />
       <PriceSection />
@@ -25,7 +25,7 @@ const MobileTemplate = () => {
       <ProductDescription />
       <SellerProductsCarrousel />
       <PaymentOptions />
-    </>
+    </div>
   )
 }
 

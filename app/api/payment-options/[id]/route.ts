@@ -13,6 +13,10 @@ export async function GET(request: Request) {
     // Simulate data fetching time to trigger the loading state
     await new Promise((resolve) => setTimeout(resolve, 1000))
 
+    if (!Array.isArray(paymentOptions)) {
+      throw new Error('Payment options data is not in the expected format')
+    }
+
     return NextResponse.json(
       {
         data: paymentOptions,
