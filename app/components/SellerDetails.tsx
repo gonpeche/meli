@@ -19,7 +19,7 @@ const SellerDetails = () => {
       attention: 'Buena atención',
       delivery: 'Entrega a tiempo',
     },
-    logo: 'https://http2.mlstatic.com/D_NQ_NP_887675-MLA74823588370_032024-G.jpg', // This would be the actual logo URL
+    logo: '/images/seller/logo.jpg', // Local logo image
   }
 
   return (

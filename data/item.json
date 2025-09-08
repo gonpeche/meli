@@ -3,7 +3,7 @@
   "seller": {
     "id": "1",
     "name": "Samsung",
-    "logo": "https://http2.mlstatic.com/D_NQ_NP_887675-MLA74823588370_032024-G.jpg"
+    "logo": "/images/seller/logo.webp"
   },
   "header": {
     "suggestions": [
@@ -20,12 +20,12 @@
   "page_content": {
     "item_image": {
       "images": [
-        "https://http2.mlstatic.com/D_NQ_NP_2X_800035-MLA81367078349_122024-F.webp",
-        "https://http2.mlstatic.com/D_NQ_NP_2X_621964-MLA81364948571_122024-F.webp",
-        "https://http2.mlstatic.com/D_NQ_NP_777643-MLA75395342152_042024-O.webp",
-        "https://http2.mlstatic.com/D_NQ_NP_725539-MLA80825742603_112024-O.webp",
-        "https://http2.mlstatic.com/D_NQ_NP_832248-MLA81366749957_122024-O.webp",
-        "https://http2.mlstatic.com/D_NQ_NP_780712-MLA81099188364_122024-O.webp"
+        "/images/products/mobile_1.webp",
+        "/images/products/mobile_2.webp",
+        "/images/products/mobile_3.webp",
+        "/images/products/mobile_4.webp",
+        "/images/products/mobile_5.webp",
+        "/images/products/mobile_6.webp"
       ]
     },
     "item_summary": {
@@ -40,8 +40,8 @@
         "favorite": false,
         "color": "Azul oscuro",
         "other_colors": [
-          "https://http2.mlstatic.com/D_Q_NP_828032-MLA75549249057_042024-R.webp",
-          "https://http2.mlstatic.com/D_Q_NP_777643-MLA75395342152_042024-R.webp"
+          "/images/products/other_colors/other_color_1.webp",
+          "/images/products/other_colors/other_color_2.webp"
         ],
         "features": [
           "Memoria RAM: 8 GB.",

@@ -38,6 +38,10 @@ const ProductImage = () => {
               priority
               className="object-contain"
               sizes="48px"
+              onError={(e) => {
+                const imgElement = e.target as HTMLImageElement
+                imgElement.src = '/placeholder-image.webp'
+              }}
             />
           </button>
         ))}
@@ -52,6 +56,10 @@ const ProductImage = () => {
           className="object-contain"
           sizes="350px"
           priority
+          onError={(e) => {
+            const imgElement = e.target as HTMLImageElement
+            imgElement.src = '/placeholder-image.webp'
+          }}
         />
       </div>
     </div>
