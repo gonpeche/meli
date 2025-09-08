@@ -21,10 +21,11 @@
     "item_image": {
       "images": [
         "https://http2.mlstatic.com/D_NQ_NP_2X_800035-MLA81367078349_122024-F.webp",
-        "https://http2.mlstatic.com/D_Q_NP_2X_621964-MLA81364948571_122024-R.webp",
-        "https://http2.mlstatic.com/D_Q_NP_2X_777643-MLA75395342152_042024-R.webp",
-        "https://http2.mlstatic.com/D_Q_NP_2X_725539-MLA80825742603_112024-R.webp",
-        "https://http2.mlstatic.com/D_Q_NP_2X_832248-MLA81366749957_122024-R.webp"
+        "https://http2.mlstatic.com/D_NQ_NP_2X_621964-MLA81364948571_122024-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_777643-MLA75395342152_042024-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_725539-MLA80825742603_112024-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_832248-MLA81366749957_122024-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_780712-MLA81099188364_122024-O.webp"
       ]
     },
     "item_summary": {
@@ -38,7 +39,10 @@
         "sold": "1000",
         "favorite": false,
         "color": "Azul oscuro",
-        "other_colors": ["lightpink", "lightgray", "lightblue"],
+        "other_colors": [
+          "https://http2.mlstatic.com/D_Q_NP_828032-MLA75549249057_042024-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_777643-MLA75395342152_042024-R.webp"
+        ],
         "features": [
           "Memoria RAM: 8 GB.",
           "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida.",

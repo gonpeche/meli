@@ -19,12 +19,10 @@ const ProductDescription = () => {
       <div className="flex flex-col gap-6">
         {product_description.sections.map((section, index) => (
           <div key={index}>
-            <h3 className="text-md md:font-semilight mb-2 font-normal text-gray-600 md:mb-1 md:text-xl">
+            <h3 className="text-md md:font-semilight mb-2 font-normal text-gray-600 md:mb-1 md:text-lg">
               {section.title}
             </h3>
-            <p className="text-sm font-light text-gray-600 md:text-lg md:font-normal">
-              {section.content}
-            </p>
+            <p className="text-sm font-light text-gray-600 md:text-lg">{section.content}</p>
           </div>
         ))}
       </div>

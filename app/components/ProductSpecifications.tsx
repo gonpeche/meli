@@ -56,14 +56,14 @@ const ProductSpecifications = () => {
         </div>
         <div className="mt-4 pl-8 md:pl-10">
           <div className="flex max-w-[400px] items-center">
-            <span className="mr-4 text-xs text-gray-600 md:text-sm">PEQUEÑO</span>
+            <span className="mr-4 text-xs text-gray-600 md:text-xs">PEQUEÑO</span>
             <div className="h-2 flex-1 rounded-full bg-gray-200">
               <div
                 className="h-full rounded-full bg-[#3483fa]"
                 style={{ width: `${(product_specifications.screen_size.scale / 5) * 100}%` }}
               />
             </div>
-            <span className="ml-4 text-xs text-gray-600 md:text-lg">GRANDE</span>
+            <span className="ml-4 text-xs text-gray-600 md:text-xs">GRANDE</span>
           </div>
         </div>
       </div>

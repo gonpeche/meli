@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import ProductHeading from './ProductHeading'
 import { useContextProvider } from '@/app/context/ProductContext'
 import PriceSection from './PriceSection'
@@ -11,6 +12,8 @@ const ProductSummary = () => {
       page_content: { item_summary },
     },
   } = useContextProvider()
+
+  const [selectedColorIndex, setSelectedColorIndex] = React.useState(0)
 
   return (
     <div className="flex flex-col gap-1 text-sm">
@@ -24,12 +27,22 @@ const ProductSummary = () => {
           Color: <span className="font-bold">{item_summary.attributes.color}</span>
         </span>
         <div className="flex gap-2">
-          {item_summary.attributes.other_colors.map((color, index) => (
+          {item_summary.attributes.other_colors.map((imageUrl, index) => (
             <button
               key={index}
-              className={`h-9 w-9 rounded-lg border-1 border-blue-500 hover:border-blue-500 ${color} overflow-hidden`}
-              style={{ backgroundColor: color }}
-            />
+              onClick={() => setSelectedColorIndex(index)}
+              className={`h-9 w-9 cursor-pointer overflow-hidden rounded-lg border-1 ${
+                selectedColorIndex === index ? 'border-blue-500' : 'border-gray-300'
+              } hover:border-blue-500`}
+            >
+              <Image
+                src={imageUrl}
+                alt={`Color variant ${index + 1}`}
+                className="h-full w-full object-cover"
+                width={36}
+                height={36}
+              />
+            </button>
           ))}
         </div>
       </div>
