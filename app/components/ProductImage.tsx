@@ -31,6 +31,7 @@ const ProductImage = () => {
               src={image}
               alt={`Product thumbnail ${index + 1}`}
               fill
+              priority
               className="object-contain"
               sizes="48px"
             />
@@ -39,7 +40,7 @@ const ProductImage = () => {
       </div>
 
       {/* Main Image */}
-      <div className="relative aspect-square w-full bg-white md:w-[350px]">
+      <div className="relative aspect-square max-h-[460px] w-full bg-white md:w-[350px]">
         <Image
           src={images[selectedImage]}
           alt="Product image"

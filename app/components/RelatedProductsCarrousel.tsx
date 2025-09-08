@@ -20,7 +20,7 @@ const RelatedProductsCarrousel = () => {
   }
 
   return (
-    <div className="w-full p-4 md:mt-8 md:border-t md:border-gray-200 md:p-0 md:pt-7">
+    <div className="w-full p-4 md:mt-8 md:p-0">
       <h2 className="mb-1 text-lg font-normal md:mb-1 md:text-2xl md:font-medium">
         Productos relacionados
       </h2>

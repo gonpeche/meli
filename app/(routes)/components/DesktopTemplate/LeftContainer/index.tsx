@@ -9,10 +9,8 @@ import ProductSummary from '@components/ProductSummary'
 const LeftContainer = () => {
   return (
     <>
-      <div className="flex flex-col gap-4 md:flex-row">
-        <div>
-          <ProductImage />
-        </div>
+      <div className="flex flex-col gap-4 md:flex-row md:border-b md:border-gray-200 md:pb-10">
+        <ProductImage />
         <div className="max-w-[340px]">
           <ProductSummary />
         </div>

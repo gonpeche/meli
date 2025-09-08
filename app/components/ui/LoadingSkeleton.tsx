@@ -6,7 +6,7 @@ type LoadingSkeletonProps = {
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ type }) => {
   const RelatedProductsSkeleton = () => (
-    <div className="mb-8">
+    <div className="mb-8 md:mt-8">
       <div className="mb-4 h-8 w-1/3 rounded bg-gray-200" />
       <div className="mb-6 h-4 w-1/4 rounded bg-gray-200" />
       <div className="flex gap-4 overflow-x-auto pb-4">
