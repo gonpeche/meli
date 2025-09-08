@@ -14,6 +14,7 @@ export default function Home() {
   }
 
   if (error) {
+    // Ideally, render a fallback HTML with a 500 error page
     return <div>Error loading product data: {error}</div>
   }
 
