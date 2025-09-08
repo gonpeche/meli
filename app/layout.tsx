@@ -12,6 +12,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Mercado Libre',
   description: 'Product Page Mockup',
+  icons: {
+    icon: [{ url: '/favicon.png' }, { url: '/favicon.png', type: 'image/png' }],
+  },
 }
 
 export default function RootLayout({
