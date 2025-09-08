@@ -1,11 +1,21 @@
+'use client'
+
 import { ContextProvider } from '../context/ProductContext'
+import { useProductData } from '../hooks/useProductData'
+import LoadingScreen from '../components/ui/LoadingScreen'
 import DesktopTemplate from './components/DesktopTemplate'
 import MobileTemplate from './components/MobileTemplate'
 
-export default async function Home() {
-  // Fetch from our mock Edge CDN API
-  const response = await fetch('http://localhost:3000/api/products')
-  const { data } = await response.json()
+export default function Home() {
+  const { data, isLoading, error } = useProductData()
+
+  if (isLoading) {
+    return LoadingScreen()
+  }
+
+  if (error) {
+    return <div>Error loading product data: {error}</div>
+  }
 
   return (
     <ContextProvider item={data}>
