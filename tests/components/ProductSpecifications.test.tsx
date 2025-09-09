@@ -141,4 +141,34 @@ describe('ProductSpecifications', () => {
     ).parentElement
     expect(viewAllButton).toHaveClass('action-link', 'flex', 'items-center', 'gap-2', 'pt-10')
   })
+
+  it('renders NFC specification correctly when NFC is not available', () => {
+    const mockDataWithoutNFC = {
+      item: {
+        page_content: {
+          item_summary: {
+            product_specifications: {
+              screen_size: {
+                value: '6.7"',
+                dimensions: '2796 x 1290 px',
+                scale: 4,
+              },
+              internal_memory: '256 GB',
+              main_front_camera: '12 Mpx',
+              main_rear_camera: '48 Mpx',
+              unlock_methods: 'Face ID',
+              nfc: false,
+            },
+          },
+        },
+      },
+    }
+
+    ;(useContextProvider as jest.Mock).mockReturnValue(mockDataWithoutNFC)
+    render(<ProductSpecifications />)
+
+    // Check NFC specification shows "No"
+    expect(screen.getByText((content) => content.includes('Con NFC'))).toBeInTheDocument()
+    expect(screen.getByText('No')).toBeInTheDocument()
+  })
 })

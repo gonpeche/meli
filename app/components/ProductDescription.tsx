@@ -13,7 +13,9 @@ const ProductDescription = () => {
   } = useContextProvider()
   return (
     <div className="p-4 pt-8 md:p-0 md:pt-8">
-      <h2 className="section-title mb-6">Descripción</h2>
+      <h2 className="mb-6 text-lg font-normal md:mb-8 md:p-0 md:text-xl md:font-medium">
+        Descripción
+      </h2>
       <div className="flex flex-col gap-6">
         {product_description.sections.map((section, index) => (
           <div key={index}>

@@ -40,7 +40,7 @@ const ProductSpecifications = () => {
 
   return (
     <div className="p-4 md:p-0 md:pt-8">
-      <h2 className="section-title mb-4">Características del producto</h2>
+      <h2 className="mb-4 text-lg font-medium md:text-xl">Características del producto</h2>
       {/* Screen Size with Progress Bar */}
       <div className="mb-8">
         <div className="mb-2 flex items-center gap-4">
