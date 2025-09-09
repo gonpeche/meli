@@ -40,7 +40,7 @@ const ProductSpecifications = () => {
 
   return (
     <div className="p-4 md:p-0 md:pt-8">
-      <h2 className="mb-4 text-lg font-medium md:text-xl">Características del producto</h2>
+      <h2 className="section-title mb-4">Características del producto</h2>
       {/* Screen Size with Progress Bar */}
       <div className="mb-8">
         <div className="mb-2 flex items-center gap-4">
@@ -49,7 +49,7 @@ const ProductSpecifications = () => {
             <p className="md:text-md text-sm font-normal md:font-medium">
               Tamaño de la pantalla: {product_specifications.screen_size.value}
             </p>
-            <p className="md:text-md text-sm text-gray-600">
+            <p className="md:text-md text-xs text-gray-600">
               {product_specifications.screen_size.dimensions}
             </p>
           </div>
@@ -96,7 +96,7 @@ const ProductSpecifications = () => {
         <SpecificationItem
           icon={<SmartphoneNfc className="h-4 w-4 text-gray-600 md:h-6 md:w-6" />}
           label="Con NFC"
-          value={product_specifications.nfc}
+          value={product_specifications.nfc ? 'Sí' : 'No'}
         />
       </div>
 

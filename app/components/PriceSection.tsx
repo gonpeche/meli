@@ -14,7 +14,7 @@ const PriceSection = () => {
     <div className="flex flex-col gap-1 bg-white p-3 md:p-0">
       <span className="text-[36px] font-light">
         <span className="pr-2">$</span>
-        {item_summary.pricing.price}
+        {item_summary.pricing.price.toLocaleString()}
       </span>
       <p className="text-lg">
         {item_summary.pricing.installments} cuotas de{' '}

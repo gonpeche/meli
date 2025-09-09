@@ -17,7 +17,7 @@ const ProductHeading = () => {
     return (
       <div className="flex items-center">
         <span className="md:text-md pr-1 text-sm">{header.rating}</span>
-        <div className="flex text-sm text-blue-500 md:text-blue-500">
+        <div className="action-link flex text-sm md:text-blue-500">
           {'★'.repeat(Math.ceil(header.rating))}
         </div>
         <span className="pl-1 text-sm text-gray-500">({header.reviews})</span>

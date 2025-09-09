@@ -45,15 +45,13 @@ const SellerProductsCarrousel = () => {
 
   return (
     <div className="md:text-md space-y-4 p-4 md:p-0 md:pt-3">
-      <h2 className="text-lg font-normal md:text-2xl md:font-medium">Productos de Samsung</h2>
+      <h2 className="section-title">Productos de Samsung</h2>
       <div className="flex flex-col gap-4 pb-4 md:flex-row md:overflow-x-auto">
         {data.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-      <p className="action-link text-sm text-blue-500 hover:text-blue-600">
-        Ver más productos de Samsung
-      </p>
+      <p className="action-link text-sm">Ver más productos de Samsung</p>
     </div>
   )
 }

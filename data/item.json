@@ -71,7 +71,7 @@
         "unlock_methods": "Desbloqueo",
         "nfc": true,
         "screen_size": {
-          "value": "6.6 \"",
+          "value": "6.6 ",
           "dimensions": "(16.11 cm x 7.74 cm x 8.2 mm)",
           "scale": 4
         }

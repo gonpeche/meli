@@ -21,9 +21,7 @@ const RelatedProductsCarrousel = () => {
 
   return (
     <div className="w-full p-4 md:mt-8 md:p-0">
-      <h2 className="mb-1 text-lg font-normal md:mb-1 md:text-2xl md:font-medium">
-        Productos relacionados
-      </h2>
+      <h2 className="section-title mb-1">Productos relacionados</h2>
       <p className="md:text-md mb-4 text-xs text-gray-600 md:mb-6">Promocionado</p>
       <div className="flex gap-4 overflow-x-auto pb-4">
         {data.map((product) => (

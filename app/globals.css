@@ -43,4 +43,8 @@ body {
   .action-link {
     @apply text-sm text-[#3483fa] hover:cursor-pointer hover:text-blue-600;
   }
+
+  .section-title {
+    @apply text-lg font-normal md:mb-1 md:text-2xl md:font-medium;
+  }
 }

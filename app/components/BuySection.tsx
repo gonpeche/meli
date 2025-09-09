@@ -30,9 +30,7 @@ const BuySection = () => {
           <span className="pl-1 font-medium">a todo el país</span>
         </div>
         <div className="text-sm text-gray-500">Conoce los tiempos y las formas de envío.</div>
-        <button className="pt-2 text-sm font-light text-[#3483fa] hover:text-blue-600">
-          Calcular cuándo llega
-        </button>
+        <button className="action-link pt-2 text-sm">Calcular cuándo llega</button>
       </div>
 
       {/* Stock Info */}
@@ -58,7 +56,7 @@ const BuySection = () => {
       <div className="mb-6">
         <div className="md:text-md mb-0 flex gap-2 text-sm md:mb-1">
           <span>Vendido por </span>
-          <button className="flex items-center gap-1 text-[#3483fa] hover:text-blue-600">
+          <button className="action-link flex items-center gap-1">
             {mockData.seller.name}{' '}
             <BadgeCheck className="h-4 w-4" fill="#3483fa" strokeWidth={2} stroke="white" />
           </button>

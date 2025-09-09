@@ -53,9 +53,7 @@ const PaymentOptions = () => {
         ))}
 
         {/* More Payment Methods Link */}
-        <button className="text-sm text-[#3483fa] hover:text-blue-600">
-          Conocé otros medios de pago
-        </button>
+        <button className="action-link text-sm">Conocé otros medios de pago</button>
       </div>
     </Card>
   )
