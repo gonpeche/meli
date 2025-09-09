@@ -148,4 +148,15 @@ describe('PaymentOptions', () => {
 
     expect(usePaymentOptions).toHaveBeenCalledWith(mockProductId)
   })
+
+  it('handles undefined data by using empty array default value', () => {
+    ;(usePaymentOptions as jest.Mock).mockReturnValue({
+      isLoading: false,
+      data: undefined,
+      error: null,
+    })
+
+    const { container } = render(<PaymentOptions />)
+    expect(container).toBeEmptyDOMElement()
+  })
 })

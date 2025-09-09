@@ -34,3 +34,19 @@ I've documented all the important architectural decisions, design choices, and t
 - React Query
 - Jest for testing
 - Lucide React for icons
+
+## 🔍 Testing
+
+I used **Jest** for testing, focusing primarily on validating UI behavior and ensuring reliability of components.
+
+**Coverage Report**:
+
+| File      | % Stmts | % Branch | % Funcs | % Lines |
+| --------- | ------- | -------- | ------- | ------- |
+| All files | 100     | 100      | 100     | 100     |
+
+For code coverage, run:
+
+```bash
+yarn test
+```

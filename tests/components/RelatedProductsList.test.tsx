@@ -143,6 +143,17 @@ describe('RelatedProductsList', () => {
     expect(screen.queryByText('⚡ FULL')).not.toBeInTheDocument()
   })
 
+  it('handles undefined data by using empty array default value', () => {
+    ;(useRelatedProducts as jest.Mock).mockReturnValue({
+      isLoading: false,
+      data: undefined,
+      error: null,
+    })
+
+    const { container } = render(<RelatedProductsList />)
+    expect(container).toBeEmptyDOMElement()
+  })
+
   it('applies correct styling classes', () => {
     ;(useRelatedProducts as jest.Mock).mockReturnValue({
       isLoading: false,

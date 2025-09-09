@@ -153,6 +153,17 @@ describe('SellerProductsCarrousel', () => {
     )
   })
 
+  it('handles undefined data by using empty array default value', () => {
+    ;(useSellerProducts as jest.Mock).mockReturnValue({
+      isLoading: false,
+      data: undefined,
+      error: null,
+    })
+
+    const { container } = render(<SellerProductsCarrousel />)
+    expect(container).toBeEmptyDOMElement()
+  })
+
   it('applies correct styling classes', () => {
     ;(useSellerProducts as jest.Mock).mockReturnValue({
       isLoading: false,

@@ -14,12 +14,25 @@ jest.mock('next/image', () => {
     src,
     alt,
     className,
+    onError,
   }: {
     src: string
     alt: string
-    className: string
+    className?: string
+    onError?: (e: any) => void
   }) {
-    return <img src={src} alt={alt} className={className} />
+    return (
+      <img
+        src={src}
+        alt={alt}
+        className={className}
+        onError={(e) => {
+          if (onError) {
+            onError(e)
+          }
+        }}
+      />
+    )
   }
 })
 
@@ -122,5 +135,21 @@ describe('ProductImage', () => {
     // Should not throw error and render empty containers
     expect(screen.queryByAltText('Product image')).not.toBeInTheDocument()
     expect(screen.queryByAltText(/Product thumbnail/)).not.toBeInTheDocument()
+  })
+
+  it('handles image loading errors by showing placeholder image', () => {
+    render(<ProductImage />)
+
+    // Get all images (main image and thumbnails)
+    const mainImage = screen.getByAltText('Product image')
+    const thumbnails = screen.getAllByAltText(/Product thumbnail \d+/)
+
+    // Simulate error on main image
+    fireEvent.error(mainImage)
+    expect(mainImage).toHaveAttribute('src', '/placeholder-image.webp')
+
+    // Simulate error on thumbnail
+    fireEvent.error(thumbnails[0])
+    expect(thumbnails[0]).toHaveAttribute('src', '/placeholder-image.webp')
   })
 })

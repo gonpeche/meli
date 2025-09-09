@@ -46,10 +46,7 @@ describe('SellerDetails', () => {
     // Check seller logo
     const logo = screen.getByAltText('Samsung')
     expect(logo).toBeInTheDocument()
-    expect(logo).toHaveAttribute(
-      'src',
-      'https://http2.mlstatic.com/D_NQ_NP_887675-MLA74823588370_032024-G.jpg'
-    )
+    expect(logo).toHaveAttribute('src', '/images/seller/logo.jpg')
 
     // Check CTA button
     expect(screen.getByText('Ir a la tienda oficial')).toBeInTheDocument()

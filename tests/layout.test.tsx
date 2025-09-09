@@ -1,4 +1,4 @@
-import RootLayout from '@/app/layout'
+import RootLayout, { metadata } from '@/app/layout'
 
 jest.mock('next/font/google', () => ({
   Inter: () => ({
@@ -12,6 +12,16 @@ jest.mock('@/lib/providers', () => ({
 }))
 
 describe('RootLayout', () => {
+  it('exports correct metadata', () => {
+    expect(metadata).toEqual({
+      title: 'Mercado Libre',
+      description: 'Product Page Mockup',
+      icons: {
+        icon: [{ url: '/favicon.png' }, { url: '/favicon.png', type: 'image/png' }],
+      },
+    })
+  })
+
   it('has correct props and structure', () => {
     const layout = RootLayout({
       children: <div>Test Content</div>,

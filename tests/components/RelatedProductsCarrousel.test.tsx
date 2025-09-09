@@ -141,6 +141,17 @@ describe('RelatedProductsCarrousel', () => {
     expect(screen.getByText((content) => content === '$2,000')).toBeInTheDocument()
   })
 
+  it('handles undefined data by using empty array default value', () => {
+    ;(useRelatedProducts as jest.Mock).mockReturnValue({
+      isLoading: false,
+      data: undefined,
+      error: null,
+    })
+
+    const { container } = render(<RelatedProductsCarrousel />)
+    expect(container).toBeEmptyDOMElement()
+  })
+
   it('applies correct styling classes', () => {
     ;(useRelatedProducts as jest.Mock).mockReturnValue({
       isLoading: false,
